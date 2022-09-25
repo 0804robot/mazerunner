@@ -8,6 +8,10 @@ private:
 public:
     CornerMerchantry(/* args */);
     ~CornerMerchantry();
+    void attachPins(int trigPin, int echoPin);
+    float getDistance_front();
+    float getDistance_side();
+
 };
 
 
