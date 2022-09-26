@@ -83,3 +83,9 @@ void Drive::turnOff()
     digitalWrite(motor_pins.IN3, LOW);
     digitalWrite(motor_pins.IN4, LOW);
 }
+
+Drive::~Drive()
+{
+    // Turn off motors - When exting the context of this class
+    turnOff();
+}
