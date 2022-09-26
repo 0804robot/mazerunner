@@ -6,7 +6,10 @@ Drive::Drive(MotorPins motorpins, int turndelay, int turnspeed)
     motor_pins = motorpins;
     turn_delay = turndelay;
     turn_speed = turnspeed;
+}
 
+void Drive::init()
+{
     // Set all the motor control pins to outputs
     pinMode(motor_pins.ENA, OUTPUT);
     pinMode(motor_pins.ENB, OUTPUT);
@@ -52,7 +55,7 @@ void Drive::corner(Direction dir)
     }
 }
 
-void Drive::turnLeft(int turndelay,  int turnspeed1, int turnspeed2)
+void Drive::turnLeft(int turndelay, int turnspeed1, int turnspeed2)
 {
     digitalWrite(motor_pins.IN1, LOW);
     digitalWrite(motor_pins.IN2, LOW);
@@ -73,7 +76,8 @@ void Drive::turnRight(int turndelay, int turnspeed1, int turnspeed2)
     delay(turndelay);
 }
 
-void Drive::turnOff(){
+void Drive::turnOff()
+{
     digitalWrite(motor_pins.IN1, LOW);
     digitalWrite(motor_pins.IN2, LOW);
     digitalWrite(motor_pins.IN3, LOW);

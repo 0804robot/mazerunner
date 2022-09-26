@@ -44,6 +44,7 @@ public:
     // Instanciates the drive class taking in the motor pins, turn delay and turn speed
     Drive(MotorPins motor_pins, int turn_delay, int turn_speed);
     ~Drive();
+    void init();
     void accelerate();
     void decelerate();
     void brake();
