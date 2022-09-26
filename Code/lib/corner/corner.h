@@ -1,13 +1,15 @@
 #ifndef CORNER_H
 #define CORNER_H
 
-typedef enum{
-  LEFT,
-  RIGHT,
-  FORWARD,
-  BRAKE,
-}turn_direction;
+#include <Arduino.h>
 
+typedef enum
+{
+    LEFT,
+    RIGHT,
+    FORWARD,
+    BRAKE,
+} turn_direction;
 
 class CornerMerchantry
 {
@@ -15,14 +17,18 @@ private:
     bool wall_detected(float, float);
     float *set_threshold_right;
     float *set_threshold_front;
+    int trigPin_front;
+    int trigPin_side;
+    int echoPin_front;
+    int echoPin_side;
+
 public:
-    CornerMerchantry(float*, float*);
+    CornerMerchantry(int, int, int, int);
     ~CornerMerchantry();
-    void attachPins(int trigPin, int echoPin);
+
     float getDistance_front();
     float getDistance_side();
     turn_direction getTurnDirection();
 };
-
 
 #endif
