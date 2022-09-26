@@ -89,3 +89,19 @@ Drive::~Drive()
     // Turn off motors - When exting the context of this class
     turnOff();
 }
+
+void Drive::accelerate() //Increase pwm value to maximum value
+{
+    for (drive_speed; drive_speed < 255; drive_speed++){
+        analogWrite(motor_pins.ENA, drive_speed);
+        delay(5);
+    }
+}
+
+void Drive::decelerate() //Decrease pwm value sent to motor to minimum
+{
+    for (drive_speed; drive_speed > 0; drive_speed--){
+        analogWrite(motor_pins.ENA, drive_speed);
+        delay(5);
+    }
+}
