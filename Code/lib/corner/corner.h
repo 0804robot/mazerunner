@@ -14,7 +14,7 @@ typedef enum
 class CornerMerchantry
 {
 private:
-    bool wall_detected(float, float);
+    bool wall_detected(float distance, float threshold);
     float *set_threshold_right;
     float *set_threshold_front;
     int trigPin_front;
@@ -23,12 +23,11 @@ private:
     int echoPin_side;
 
 public:
-    CornerMerchantry(int, int, int, int,float*, float*);
-    ~CornerMerchantry();
+    CornerMerchantry(int trigPin_1, int echoPin_1, int trigPin_2, int echoPin_2, float *right_threshold, float *front_threshold);
 
-    float getDistance_front();
-    float getDistance_side();
-    turn_direction getTurnDirection();
+    float getDistance_front(void);
+    float getDistance_side(void);
+    turn_direction getTurnDirection(void);
 };
 
 #endif
