@@ -4,10 +4,10 @@ CornerMerchantry::CornerMerchantry(int trigPin_1, int echoPin_1, int trigPin_2, 
 {
     set_threshold_right = right_threshold;
     set_threshold_front = front_threshold;
-    this->trigPin_front = trigPin_1;
-    this->echoPin_front = echoPin_1;
-    this->trigPin_side = trigPin_2;
-    this->echoPin_side = echoPin_2;
+    trigPin_front = trigPin_1;
+    echoPin_front = echoPin_1;
+    trigPin_side = trigPin_2;
+    echoPin_side = echoPin_2;
     
 }
 
