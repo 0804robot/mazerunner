@@ -8,39 +8,40 @@ CornerMerchantry::CornerMerchantry(int trigPin_1, int echoPin_1, int trigPin_2, 
     this->echoPin_front = echoPin_1;
     this->trigPin_side = trigPin_2;
     this->echoPin_side = echoPin_2;
-    pinMode(trigPin_front, OUTPUT);
-    pinMode(trigPin_side, OUTPUT);
-    pinMode(echoPin_front, INPUT);
-    pinMode(echoPin_side, INPUT);
+    
 }
+
+
+void CornerMerchantry::init(){
+    pinMode(trigPin_front,OUTPUT);
+    pinMode(trigPin_side,OUTPUT);
+    pinMode(echoPin_front,INPUT);
+    pinMode(echoPin_side,INPUT);
+}
+
 float CornerMerchantry::getDistance_front()
 {
-    // eliminate unknown state
-    digitalWrite(trigPin_front, LOW);
-    delayMicroseconds(2);
-    // sending pulse
-    digitalWrite(trigPin_front, HIGH);
-    delayMicroseconds(10);
-    // switching off pulse
-    digitalWrite(trigPin_front, LOW);
-    // reading pulse width and converting to distance
-    float duration = pulseIn(echoPin_front, HIGH);
-    return duration * 0.034 / 2;
+    return getDistance(trigPin_front,echoPin_front);
 }
 float CornerMerchantry::getDistance_side()
 {
+    return getDistance(trigPin_side,echoPin_side);
+}
+
+float CornerMerchantry::getDistance(int trig, int echo){
     // eliminate unknown state
-    digitalWrite(trigPin_side, LOW);
+    digitalWrite(trig, LOW);
     delayMicroseconds(2);
     // sending pulse
-    digitalWrite(trigPin_side, HIGH);
+    digitalWrite(trig, HIGH);
     delayMicroseconds(10);
     // switching off pulse
-    digitalWrite(trigPin_side, LOW);
+    digitalWrite(trig, LOW);
     // reading pulse width and converting to distance
-    float duration = pulseIn(echoPin_side, HIGH);
+    float duration = pulseIn(echo, HIGH);
     return duration * 0.034 / 2;
 }
+
 
 bool CornerMerchantry::wall_detected(float distance, float threshold)
 {
