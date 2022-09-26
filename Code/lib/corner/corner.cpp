@@ -1,4 +1,5 @@
 #include <corner.h>
+#include <Arduino.h>
 
 CornerMerchantry::CornerMerchantry(int trigPin_1, int echoPin_1, int trigPin_2, int echoPin_2, float *right_threshold, float *front_threshold)
 {
@@ -8,27 +9,27 @@ CornerMerchantry::CornerMerchantry(int trigPin_1, int echoPin_1, int trigPin_2, 
     echoPin_front = echoPin_1;
     trigPin_side = trigPin_2;
     echoPin_side = echoPin_2;
-    
 }
 
-
-void CornerMerchantry::init(){
-    pinMode(trigPin_front,OUTPUT);
-    pinMode(trigPin_side,OUTPUT);
-    pinMode(echoPin_front,INPUT);
-    pinMode(echoPin_side,INPUT);
+void CornerMerchantry::init()
+{
+    pinMode(trigPin_front, OUTPUT);
+    pinMode(trigPin_side, OUTPUT);
+    pinMode(echoPin_front, INPUT);
+    pinMode(echoPin_side, INPUT);
 }
 
 float CornerMerchantry::getDistance_front()
 {
-    return getDistance(trigPin_front,echoPin_front);
+    return getDistance(trigPin_front, echoPin_front);
 }
 float CornerMerchantry::getDistance_side()
 {
-    return getDistance(trigPin_side,echoPin_side);
+    return getDistance(trigPin_side, echoPin_side);
 }
 
-float CornerMerchantry::getDistance(int trig, int echo){
+float CornerMerchantry::getDistance(int trig, int echo)
+{
     // eliminate unknown state
     digitalWrite(trig, LOW);
     delayMicroseconds(2);
@@ -41,7 +42,6 @@ float CornerMerchantry::getDistance(int trig, int echo){
     float duration = pulseIn(echo, HIGH);
     return duration * 0.034 / 2;
 }
-
 
 bool CornerMerchantry::wall_detected(float distance, float threshold)
 {

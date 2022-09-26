@@ -1,8 +1,6 @@
 #ifndef CORNER_H
 #define CORNER_H
 
-#include <Arduino.h>
-
 typedef enum
 {
     LEFT,
@@ -15,7 +13,7 @@ class CornerMerchantry
 {
 private:
     bool wall_detected(float distance, float threshold);
-    float getDistance(int trig,int echo);
+    float getDistance(int trig, int echo);
     float *set_threshold_right;
     float *set_threshold_front;
     int trigPin_front;
