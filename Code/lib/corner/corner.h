@@ -23,7 +23,7 @@ private:
     int echoPin_side;
 
 public:
-    CornerMerchantry(int, int, int, int);
+    CornerMerchantry(int, int, int, int,float*, float*);
     ~CornerMerchantry();
 
     float getDistance_front();
