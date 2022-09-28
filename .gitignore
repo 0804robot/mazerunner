@@ -34,3 +34,10 @@
 # Platform IO
 .pio/
 .vscode/
+
+techweekpcb/techweekpcb-backups/
+.xml
+techweekpcb/techweekpcb.xml
+techweekpcb/#auto_saved_files#
+techweekpcb/fp-info-cache
+techweekpcb/.~lock.techweekpcb.csv#
