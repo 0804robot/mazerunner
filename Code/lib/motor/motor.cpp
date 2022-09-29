@@ -108,7 +108,7 @@ void Drive::decelerate(int new_Speed) //Decrease pwm value sent to motor to mini
     }
 }
 
-void Drive::set_Speed (int speed_val) //Method to set the speed of the drive
+void Drive::init_Speed (int speed_val) //Method to initialize the speed of the drive
 {
     drive_speed = speed_val;
 }
