@@ -90,20 +90,25 @@ Drive::~Drive()
     turnOff();
 }
 
-void Drive::accelerate() //Increase pwm value to maximum value
+void Drive::accelerate(int new_speed) //Increase pwm value to maximum value
 {
-    for (drive_speed; drive_speed < 255; drive_speed++){
+    for (drive_speed; drive_speed < new_speed; drive_speed++){
         analogWrite(motor_pins.ENA, drive_speed);
         analogWrite(motor_pins.ENB, drive_speed);
         delay(5);
     }
 }
 
-void Drive::decelerate() //Decrease pwm value sent to motor to minimum
+void Drive::decelerate(int new_Speed) //Decrease pwm value sent to motor to minimum
 {
-    for (drive_speed; drive_speed > 0; drive_speed--){
+    for (drive_speed; drive_speed > new_Speed; drive_speed--){
         analogWrite(motor_pins.ENA, drive_speed);
         analogWrite(motor_pins.ENB, drive_speed);
         delay(5);
     }
+}
+
+void Drive::set_Speed (int speed_val) //Method to set the speed of the drive
+{
+    drive_speed = speed_val;
 }
