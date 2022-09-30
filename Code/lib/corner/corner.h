@@ -19,9 +19,9 @@ private:
     // get distance from an ultrasonic sensor by using the trig and echo pins
     float getDistance(int trig, int echo);
     // set threshold to the wall from the right
-    float *set_threshold_right;
+    float set_threshold_right;
     // set threshold to the wall from the front
-    float *set_threshold_front;
+    float set_threshold_front;
     // ULtrasonic pins
     int trigPin_front;
     int trigPin_side;
@@ -30,7 +30,7 @@ private:
 
 public:
     // class constructor. Assigns ultrasoni pins and sets threshold
-    CornerMerchantry(int trigPin_1, int echoPin_1, int trigPin_2, int echoPin_2, float *right_threshold, float *front_threshold);
+    CornerMerchantry(int trigPin_1, int echoPin_1, int trigPin_2, int echoPin_2, float right_threshold, float front_threshold);
     // initialises ultrasonic pins
     void init(void);
     // returns distance from the front facing ultrasonic sensor

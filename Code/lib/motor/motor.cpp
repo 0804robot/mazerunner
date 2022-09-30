@@ -1,4 +1,4 @@
-#include "Arduino.h"
+
 #include "motor.h"
 
 Drive::Drive(MotorPins motorpins, int turndelay, int turnspeed)
@@ -28,11 +28,11 @@ void Drive::sharpCorner(Direction dir)
     {
     case Left:
         // Turn Right Motor in the forward direction while Left Motor is turning in backward direction
-        turnLeft(turn_delay, turn_speed, turn_speed);
+        turnLeft(turn_delay, turn_speed);
         break;
     case Right:
         // Turn Left Motor in the forward direction while Right Motor is turning in backward direction
-        turnRight(turn_delay, turn_speed, turn_speed);
+        turnRight(turn_delay, turn_speed);
         break;
     default:
         break;
@@ -44,35 +44,35 @@ void Drive::corner(Direction dir)
     {
     case Left:
         // Turn Right Motor in the forward direction while Left Motor is off
-        turnLeft(turn_delay, turn_speed, 0);
+        turnLeft(turn_delay, turn_speed);
         break;
     case Right:
         // Turn Left Motor in the forward direction while Right Motor is off
-        turnRight(turn_delay, turn_speed, 0);
+        turnRight(turn_delay, turn_speed);
         break;
     default:
         break;
     }
 }
 
-void Drive::turnLeft(int turndelay, int turnspeed1, int turnspeed2)
+void Drive::turnLeft(int turndelay, int turnspeed)
 {
     digitalWrite(motor_pins.IN1, LOW);
     digitalWrite(motor_pins.IN2, LOW);
-    analogWrite(motor_pins.ENA, turnspeed1);
+    analogWrite(motor_pins.ENA, turnspeed);
     digitalWrite(motor_pins.IN3, HIGH);
     digitalWrite(motor_pins.IN4, LOW);
-    analogWrite(motor_pins.ENB, turnspeed2);
+    analogWrite(motor_pins.ENB, turnspeed);
     delay(turndelay);
 }
-void Drive::turnRight(int turndelay, int turnspeed1, int turnspeed2)
+void Drive::turnRight(int turndelay, int turnspeed)
 {
     digitalWrite(motor_pins.IN1, HIGH);
     digitalWrite(motor_pins.IN2, LOW);
-    analogWrite(motor_pins.ENA, turnspeed1);
+    analogWrite(motor_pins.ENA, turnspeed);
     digitalWrite(motor_pins.IN3, LOW);
     digitalWrite(motor_pins.IN4, LOW);
-    analogWrite(motor_pins.ENB, turnspeed2);
+    analogWrite(motor_pins.ENB, turnspeed);
     delay(turndelay);
 }
 
@@ -89,3 +89,7 @@ Drive::~Drive()
     // Turn off motors - When exting the context of this class
     turnOff();
 }
+
+void Drive::accelerate(){}
+void Drive::decelerate(){}
+void Drive::brake(){}

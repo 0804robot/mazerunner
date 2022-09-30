@@ -1,7 +1,7 @@
 #include <corner.h>
 #include <Arduino.h>
 
-CornerMerchantry::CornerMerchantry(int trigPin_1, int echoPin_1, int trigPin_2, int echoPin_2, float *right_threshold, float *front_threshold)
+CornerMerchantry::CornerMerchantry(int trigPin_1, int echoPin_1, int trigPin_2, int echoPin_2, float right_threshold, float front_threshold)
 {
     set_threshold_right = right_threshold;
     set_threshold_front = front_threshold;
@@ -60,8 +60,8 @@ turn_direction CornerMerchantry::getTurnDirection()
     float rightDistance = getDistance_side();
     float frontDistance = getDistance_front();
 
-    bool rightWall = wall_detected(rightDistance, *set_threshold_right);
-    bool frontWall = wall_detected(frontDistance, *set_threshold_front);
+    bool rightWall = wall_detected(rightDistance, set_threshold_right);
+    bool frontWall = wall_detected(frontDistance, set_threshold_front);
 
     // ROBOT MOVING AWAY FROM WALL
     if (rightWall == false && frontWall == false)

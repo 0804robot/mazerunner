@@ -1,6 +1,8 @@
 #ifndef MOTOR_H
 #define MOTOR_H
 
+#include "Arduino.h"
+
 // MotorPins is the motor driver pins based on L298N motor driver
 // it has ENA, IN1, IN2 for controlling one motor and
 // ENB, IN3 and IN4 for controlling the other motor
