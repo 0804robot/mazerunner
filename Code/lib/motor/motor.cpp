@@ -62,7 +62,7 @@ void Drive::turnLeft(int turndelay, int turnspeed1, int turnspeed2)
     analogWrite(motor_pins.ENA, turnspeed1);
     digitalWrite(motor_pins.IN3, HIGH);
     digitalWrite(motor_pins.IN4, LOW);
-    digitalWrite(motor_pins.ENB, turnspeed2);
+    analogWrite(motor_pins.ENB, turnspeed2);
     delay(turndelay);
 }
 void Drive::turnRight(int turndelay, int turnspeed1, int turnspeed2)
@@ -72,7 +72,7 @@ void Drive::turnRight(int turndelay, int turnspeed1, int turnspeed2)
     analogWrite(motor_pins.ENA, turnspeed1);
     digitalWrite(motor_pins.IN3, LOW);
     digitalWrite(motor_pins.IN4, LOW);
-    digitalWrite(motor_pins.ENB, turnspeed2);
+    analogWrite(motor_pins.ENB, turnspeed2);
     delay(turndelay);
 }
 
