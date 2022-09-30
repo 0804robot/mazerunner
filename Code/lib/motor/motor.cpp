@@ -90,6 +90,24 @@ Drive::~Drive()
     turnOff();
 }
 
-void Drive::accelerate(){}
-void Drive::decelerate(){}
-void Drive::brake(){}
+void Drive::accelerate() //Increase pwm value to maximum value
+{
+    drive_speed = drive_speed + 10;
+    if (drive_speed > 255) {
+        drive_speed = 255;
+    }
+}
+
+void Drive::decelerate() //Decrease speed by 10
+{
+
+    drive_speed = drive_speed - 10;
+    if (drive_speed < 0) {
+        drive_speed = 0;
+    }
+}
+
+void Drive::init_Speed (int speed_val) //Method to initialize the speed of the drive
+{
+    drive_speed = speed_val;
+}
