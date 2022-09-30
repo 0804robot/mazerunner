@@ -34,7 +34,8 @@ private:
     int turn_delay = 1000;
     // The speed of motor during turning
     int turn_speed = 125;
-
+    //Default drive speed
+    int drive_speed = 125;
     // turnLeft makes the robot turns to the left direction
     void turnLeft(int turn_delay, int turn_speed);
     // turnRight makes the robot turns to the right direction
