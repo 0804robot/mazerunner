@@ -25,7 +25,7 @@ void setup()
     Serial.begin(9600);
     driver.init();
     cornerLogic.init();
-
+}
 void loop()
 {
     switch (cornerLogic.getTurnDirection())
