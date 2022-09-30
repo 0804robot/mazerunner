@@ -40,6 +40,7 @@ float CornerMerchantry::getDistance(int trig, int echo)
     digitalWrite(trig, LOW);
     // reading pulse width and converting to distance
     float duration = pulseIn(echo, HIGH);
+    delay(30);
     return duration * 0.034 / 2;
 }
 

@@ -42,6 +42,7 @@ private:
     void turnLeft(int turn_delay, int turn_speed);
     // turnRight makes the robot turns to the right direction
     void turnRight(int turn_delay, int turn_speed);
+    int speed_val;
 
 public:
     // Instanciates the drive class taking in the motor pins, turn delay and turn speed

@@ -20,6 +20,7 @@ void Drive::init()
 
     // Turn off motors - Initial state
     turnOff();
+    drive_speed = speed_val;
 }
 
 void Drive::sharpCorner(Direction dir)
@@ -60,8 +61,8 @@ void Drive::turnLeft(int turndelay, int turnspeed)
     digitalWrite(motor_pins.IN1, LOW);
     digitalWrite(motor_pins.IN2, LOW);
     analogWrite(motor_pins.ENA, turnspeed);
-    digitalWrite(motor_pins.IN3, HIGH);
-    digitalWrite(motor_pins.IN4, LOW);
+    digitalWrite(motor_pins.IN3, LOW);
+    digitalWrite(motor_pins.IN4, HIGH);
     analogWrite(motor_pins.ENB, turnspeed);
     delay(turndelay);
 }
@@ -107,7 +108,8 @@ void Drive::decelerate() //Decrease speed by 10
     }
 }
 
-void Drive::init_Speed (int speed_val) //Method to initialize the speed of the drive
+void Drive::brake() //Decrease speed by 10
 {
-    drive_speed = speed_val;
+
+
 }
