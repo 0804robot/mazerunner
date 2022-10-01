@@ -8,6 +8,7 @@ typedef enum
     RIGHT,
     FORWARD,
     BRAKE,
+    NOWALLS,
 } turn_direction;
 
 // Object created able to process distance and generate required movement

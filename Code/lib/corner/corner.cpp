@@ -67,7 +67,7 @@ turn_direction CornerMerchantry::getTurnDirection()
     // ROBOT MOVING AWAY FROM WALL
     if (rightWall == false && frontWall == false)
     {
-        return RIGHT;
+        return NOWALLS;
         // ROBOT AWAY FROM WALL BUT A WALL IS IN FRONT
     }
     else if (rightWall == false && frontWall == true)
