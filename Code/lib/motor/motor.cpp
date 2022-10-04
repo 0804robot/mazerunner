@@ -71,8 +71,8 @@ void Drive::turnRight(int turndelay, int turnspeed)
     digitalWrite(motor_pins.IN1, LOW);
     digitalWrite(motor_pins.IN2, LOW);
     analogWrite(motor_pins.ENA, turnspeed);
-    digitalWrite(motor_pins.IN3, HIGH);
-    digitalWrite(motor_pins.IN4, LOW);
+    digitalWrite(motor_pins.IN3, LOW);
+    digitalWrite(motor_pins.IN4, HIGH);
     analogWrite(motor_pins.ENB, turnspeed);
     delay(turndelay);
 }
@@ -98,12 +98,12 @@ void Drive::accelerate() // Increase pwm value to maximum value
     // {
     //     drive_speed = 255;
     // }
-    digitalWrite(motor_pins.IN1, LOW);
-    digitalWrite(motor_pins.IN2, HIGH);
+    digitalWrite(motor_pins.IN1, HIGH);
+    digitalWrite(motor_pins.IN2, LOW);
     analogWrite(motor_pins.ENA, 110);
     digitalWrite(motor_pins.IN3, LOW);
     digitalWrite(motor_pins.IN4, HIGH);
-    analogWrite(motor_pins.ENB, 123);
+    analogWrite(motor_pins.ENB, 110);
 }
 
 void Drive::decelerate() // Decrease speed by 10

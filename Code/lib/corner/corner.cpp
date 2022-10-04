@@ -82,7 +82,7 @@ turn_direction CornerMerchantry::getTurnDirection()
     }
     else if (rightWall == true && frontWall == true)
     {
-        return LEFT;
+        return RIGHT;
         // IF EVERYTHING FAILS STOP
     }
     else
