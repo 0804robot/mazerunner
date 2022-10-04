@@ -1,23 +1,48 @@
-Source:,/home/kimanimichael/mazerunner/techweekpcb/techweekpcb.kicad_sch,,,,,,
-Date:,"Roobii, Fuulbana 28, 2022 10:57:18 WB EAT",,,,,,
-Tool:,Eeschema 6.0.7-f9a2dced07~116~ubuntu20.04.1,,,,,,
-Generator:,/usr/share/kicad/plugins/bom_csv_grouped_by_value.py,,,,,,
-Component Count:,23,,,,,,
-,,,,,,,
-,,,,,,,
-Collated Components:,,,,,,,
-,,,,,,,
-Item,Qty,Reference(s),Value,LibPart,Footprint,Datasheet,Nerokas link
-1,2,"C1, C2",10uF,Device:C_Small,UserLibrary:CP_Radial_D5.0mm_P2.50mm,~,https://store.nerokas.co.ke/index.php?route=product/product&product_id=961&search=10uF&description=true
-2,2,"D3, D4",LED,Device:LED,LED_THT:LED_D5.0mm,~,https://store.nerokas.co.ke/index.php?route=product/product&product_id=947&search=blue+led+&description=true
-4,2,"J1, J5",Screw_Terminal_01x02,Connector:Screw_Terminal_01x02,"UserLibrary:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",~,https://store.nerokas.co.ke/index.php?route=product/product&product_id=2056
-5,1,J2,Conn_01x07_Male,Connector:Conn_01x07_Male,Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical,~,https://store.nerokas.co.ke/index.php?route=product/product&product_id=955&search=header+male&description=true
-6,1,Q1,FQP27P06,Transistor_FET:AO3401A,UserLibrary:TO-220-3_Vertical,https://www.sparkfun.com/datasheets/Components/General/FQP27P06.pdf,https://store.nerokas.co.ke/index.php?route=product/product&product_id=1181&search=p+mosfet&description=true
-7,1,R1,1.1k,Device:R_Small,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~,https://store.nerokas.co.ke/index.php?route=product/product&product_id=1565&search=1k+resistor&description=true
-8,3,"R2, R4, R6",1k,Device:R_Small,UserLibrary:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~,https://store.nerokas.co.ke/index.php?route=product/product&product_id=1565&search=1k+resistor&description=true
-9,3,"R3, R5, R7",2k,Device:R_Small,UserLibrary:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~,https://store.nerokas.co.ke/index.php?route=product/product&product_id=1559
-10,2,"R16, R17",100,Device:R_Small,UserLibrary:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~,https://store.nerokas.co.ke/index.php?route=product/product&product_id=513&search=100+resistor&description=true
-11,1,U1,ESP32-S,Userlibrary:ESP32-S,UserLibrary:ESP32-S,https://docs.ai-thinker.com/_media/esp32/docs/nodemcu-32s_product_specification.pdf,https://store.nerokas.co.ke/index.php?route=product/product&product_id=2281&search=esp32&description=true
-12,1,U2,LM1084-5.0,Regulator_Linear:LM1084-5.0,UserLibrary:TO-220-3_Vertical,http://www.ti.com/lit/ds/symlink/lm1084.pdf,https://store.nerokas.co.ke/index.php?route=product/product&product_id=1933&search=LM1084&description=true
-13,3,"U3, U4, U5",Ultrasonic,Userlibrary:Ultrasonic,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,`,https://store.nerokas.co.ke/index.php?route=product/product&product_id=105
-14,1,,Pins,`,`,`,https://store.nerokas.co.ke/index.php?route=product/product&product_id=957&search=header+female&description=true
+"Source:","/home/kimanimichael/mazerunner/techweekpcb/techweekpcb.kicad_sch"
+"Date:","Qibxata, Onkololeessa  4, 2022  9:47:12 WD EAT"
+"Tool:","Eeschema 6.0.7-f9a2dced07~116~ubuntu20.04.1"
+"Generator:","/usr/share/kicad/plugins/bom_csv_grouped_by_value.py"
+"Component Count:","23"
+
+"Individual Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet","Nerokas link"
+"","","C1","10uF","Device:C_Small","UserLibrary:CP_Radial_D5.0mm_P2.50mm","~","https://store.nerokas.co.ke/index.php?route=product/product&product_id=961&search=10uF&description=true"
+"","","C2","10uF","Device:C_Small","UserLibrary:CP_Radial_D5.0mm_P2.50mm","~","https://store.nerokas.co.ke/index.php?route=product/product&product_id=961&search=10uF&description=true"
+"","","D3","LED","Device:LED","LED_THT:LED_D5.0mm","~","https://store.nerokas.co.ke/index.php?route=product/product&product_id=947&search=blue+led+&description=true"
+"","","D4","LED","Device:LED","LED_THT:LED_D5.0mm","~","https://store.nerokas.co.ke/index.php?route=product/product&product_id=948&search=white+led+&description=true"
+"","","H1","MountingHole","Mechanical:MountingHole","MountingHole:MountingHole_2.5mm","~",""
+"","","H2","MountingHole","Mechanical:MountingHole","MountingHole:MountingHole_2.5mm","~",""
+"","","H3","MountingHole","Mechanical:MountingHole","MountingHole:MountingHole_2.5mm","~",""
+"","","H4","MountingHole","Mechanical:MountingHole","MountingHole:MountingHole_2.5mm","~",""
+"","","J1","Screw_Terminal_01x02","Connector:Screw_Terminal_01x02","UserLibrary:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal","~","https://store.nerokas.co.ke/index.php?route=product/product&product_id=2056"
+"","","J2","Conn_01x07_Male","Connector:Conn_01x07_Male","Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical","~",""
+"","","J5","Screw_Terminal_01x02","Connector:Screw_Terminal_01x02","UserLibrary:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal","~","https://store.nerokas.co.ke/index.php?route=product/product&product_id=2056"
+"","","R1","1.1k","Device:R_Small","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~","https://store.nerokas.co.ke/index.php?route=product/product&product_id=1565&search=1k+resistor&description=true"
+"","","R2","1k","Device:R_Small","UserLibrary:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~",""
+"","","R3","2k","Device:R_Small","UserLibrary:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~",""
+"","","R4","1k","Device:R_Small","UserLibrary:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~",""
+"","","R5","2k","Device:R_Small","UserLibrary:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~",""
+"","","R6","1k","Device:R_Small","UserLibrary:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~",""
+"","","R7","2k","Device:R_Small","UserLibrary:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~",""
+"","","R16","100","Device:R_Small","UserLibrary:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~","https://store.nerokas.co.ke/index.php?route=product/product&product_id=513&search=100+resistor&description=true"
+"","","R17","100","Device:R_Small","UserLibrary:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~","https://store.nerokas.co.ke/index.php?route=product/product&product_id=513&search=100+resistor&description=true"
+"","","U3","Ultrasonic","Userlibrary:Ultrasonic","Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical","",""
+"","","U4","Ultrasonic","Userlibrary:Ultrasonic","Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical","",""
+"","","U5","Ultrasonic","Userlibrary:Ultrasonic","Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical","",""
+
+
+
+"Collated Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet","Nerokas link"
+"1","2","C1, C2","10uF","Device:C_Small","UserLibrary:CP_Radial_D5.0mm_P2.50mm","~","https://store.nerokas.co.ke/index.php?route=product/product&product_id=961&search=10uF&description=true"
+"2","2","D3, D4","LED","Device:LED","LED_THT:LED_D5.0mm","~","https://store.nerokas.co.ke/index.php?route=product/product&product_id=947&search=blue+led+&description=true"
+"3","4","H1, H2, H3, H4","MountingHole","Mechanical:MountingHole","MountingHole:MountingHole_2.5mm","~",""
+"4","2","J1, J5","Screw_Terminal_01x02","Connector:Screw_Terminal_01x02","UserLibrary:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal","~","https://store.nerokas.co.ke/index.php?route=product/product&product_id=2056"
+"5","1","J2","Conn_01x07_Male","Connector:Conn_01x07_Male","Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical","~",""
+"6","1","R1","1.1k","Device:R_Small","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~","https://store.nerokas.co.ke/index.php?route=product/product&product_id=1565&search=1k+resistor&description=true"
+"7","3","R2, R4, R6","1k","Device:R_Small","UserLibrary:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~",""
+"8","3","R3, R5, R7","2k","Device:R_Small","UserLibrary:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~",""
+"9","2","R16, R17","100","Device:R_Small","UserLibrary:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~","https://store.nerokas.co.ke/index.php?route=product/product&product_id=513&search=100+resistor&description=true"
+"10","3","U3, U4, U5","Ultrasonic","Userlibrary:Ultrasonic","Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical","",""

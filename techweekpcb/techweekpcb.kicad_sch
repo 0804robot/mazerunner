@@ -789,7 +789,7 @@
   )
 
   (symbol (lib_id "Userlibrary:ESP32-S") (at 205.74 83.82 0) (unit 1)
-    (in_bom yes) (on_board yes) (fields_autoplaced)
+    (in_bom no) (on_board yes) (fields_autoplaced)
     (uuid ddbea374-ba31-42ee-9c75-29aaaf8e6a61)
     (property "Reference" "U1" (id 0) (at 205.74 53.34 0))
     (property "Value" "ESP32-S" (id 1) (at 205.74 55.88 0))
